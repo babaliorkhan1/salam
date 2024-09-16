@@ -1,0 +1,194 @@
+﻿
+
+
+@model List<Event>
+
+
+
+@*
+<div class="container" style="width:400px;margin-top:80px;">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">PhoneNumber</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+
+                <tr>
+
+                    <th scope="row">@item.Id</th>
+                    <th>@item.Title</th>
+                    <th>@item.PhoneNumber</th>
+                    <td><a asp-controller="event" asp-action="update" asp-route-id="@item.Id">UPDATE<i class="fas fa-edit text text-primary"></i></a></td>
+                    <td><a onclick="if(!confirm('Are Your Sure?')){return false;}" asp-controller="event" asp-action="remove" asp-route-id="@item.Id" class=" delete-item">SIL<i class="fas fa-trash text text-danger"></i></a></td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <div>
+        <a asp-controller="event" asp-action="create" style="display: block; text-decoration: none; color: white; width: 100%; height: 100%"> <div style="width:100%; " class="btn btn-outline-success">Blog yarat </div></a>
+    </div>
+
+</div>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+*@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from educhamp.themetrades.com/demo/admin/courses.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:10:19 GMT -->
+<head>
+
+	<!-- META ============================================= -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+
+	<!-- DESCRIPTION -->
+	<meta name="description" content="EduChamp : Education HTML Template" />
+
+	<!-- OG -->
+	<meta property="og:title" content="EduChamp : Education HTML Template" />
+	<meta property="og:description" content="EduChamp : Education HTML Template" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- FAVICONS ICON ============================================= -->
+	<link rel="icon" href="../error-404.html" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="~/admin/assets/images/favicon.png" />
+
+	<!-- PAGE TITLE HERE ============================================= -->
+	<title>EduChamp : Education HTML Template </title>
+
+	<!-- MOBILE SPECIFIC ============================================= -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--[if lt IE 9]>
+	<script src="~/admin/assets/js/html5shiv.min.js"></script>
+	<script src="~/admin/assets/js/respond.min.js"></script>
+	<![endif]-->
+	<!-- All PLUGINS CSS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="~/admin/assets/css/assets.css">
+	<link rel="stylesheet" type="text/css" href="~/admin/assets/vendors/calendar/fullcalendar.css">
+
+	<!-- TYPOGRAPHY ============================================= -->
+	<link rel="stylesheet" type="text/css" href="~/admin/assets/css/typography.css">
+
+	<!-- SHORTCODES ============================================= -->
+	<link rel="stylesheet" type="text/css" href="~/admin/assets/css/shortcodes/shortcodes.css">
+
+	<!-- STYLESHEETS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="~/admin/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="~/admin/assets/css/dashboard.css">
+	<link class="skin" rel="stylesheet" type="text/css" href="~/admin/assets/css/color/color-1.css">
+
+</head>
+<body class="ttr-opened-sidebar ttr-pinned-sidebar">
+
+	<!--Main container start -->
+	<main class="ttr-wrapper">
+		<div class="container-fluid">
+			<div class="db-breadcrumb">
+				<h4 class="breadcrumb-title">Courses</h4>
+				<ul class="db-breadcrumb-list">
+					<li><a asp-controller="home" asp-action="index"><i class="fa fa-home"></i>Home</a></li>
+					<li>Courses</li>
+				</ul>
+			</div>
+			<div class="row">
+				<!-- Your Profile Views Chart -->
+				<div class="col-lg-12 m-b30">
+					<div class="widget-box">
+						<div class="wc-title">
+							<h4>Your Events</h4>
+						</div>
+						<div class="widget-inner">
+							@foreach (var item in Model)
+							{
+								<div class="card-courses-list admin-courses">
+									<div class="card-courses-media">
+										<img src="~/assets/images/event/@item.Image" alt="" />
+									</div>
+									<div class="card-courses-full-dec">
+										<div class="card-courses-title">
+											<h4>@item.Title</h4>
+										</div>
+										<div class="card-courses-list-bx">
+											<ul class="card-courses-view">
+												<li class="card-courses-user">
+													<div class="card-courses-user-pic">
+														<img src="~/admin/assets/images/testimonials/pic3.jpg" alt="" />
+													</div>
+													<div class="card-courses-user-info">
+														<h5>Teacher</h5>
+														<h4>Keny White</h4>
+													</div>
+												</li>
+											
+											
+												
+												<li class="card-courses-price">
+													<del>$190</del>
+													<h5 class="text-primary">$120</h5>
+												</li>
+											</ul>
+										</div>
+										<div class="row card-courses-dec">
+											<div class="col-md-12">
+												<h6 class="m-b10">Event Description</h6>
+												<p>@item.Description </p>
+											</div>
+											<div class="col-md-12">
+												<a asp-controller="event" asp-action="update" asp-route-id="@item.Id"  class="btn green radius-xl outline">Update</a>
+												<a onclick="if(!confirm('Are Your Sure?')){return false;}" asp-controller="event" asp-action="remove" asp-route-id="@item.Id" class="btn red outline radius-xl ">Remove</a>
+
+											</div>
+										</div>
+
+									</div>
+								
+								</div>
+							}
+							<a asp-controller="event" asp-action="create"> <div style="width:100%;border-radius:15px;"  class="btn btn-outline-success">Event yarat </div></a>
+
+
+						</div>
+					</div>
+				</div>
+				<!-- Your Profile Views Chart END-->
+			</div>
+		</div>
+	</main>
+
+	<div class="ttr-overlay"></div>
+
+	<!-- External JavaScripts -->
+
+</body>
+
+<!-- Mirrored from educhamp.themetrades.com/demo/admin/courses.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:11:35 GMT -->
+</html>
+
+@*burada maragli bir olay odurki return false qoymurki a tago hereket edir bir nov preventdefault ozeliiyi atamis olur*@
+<style>
+
+	a:hover &{
+		transform:scale(2);
+	}
+</style>

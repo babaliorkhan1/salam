@@ -1,0 +1,36 @@
+﻿@model setting
+
+<div class="container" style="width:60%;margin-top:80px;">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Update</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+
+
+            <tr>
+
+                <th scope="row">@Model.Id</th>
+                <th>@Model.Title</th>
+                <th>
+                    <a asp-controller="setting" asp-action="update"> <div style="width:100%; " class="btn btn-outline-success">Update </div></a>
+                </th>
+
+
+            </tr>
+
+
+        </tbody>
+    </table>
+    <div>
+    </div>
+
+</div>
+

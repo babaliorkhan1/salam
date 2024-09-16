@@ -1,0 +1,49 @@
+﻿@model AltLevel
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<div class="container" style="width:60%;">
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Name"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Name" />
+            <span class="text text-danger" asp-validation-for="Name"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Link"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Link" />
+            <span class="text text-danger" asp-validation-for="Link"></span>
+
+        </div>
+
+
+         <div class="form-group">
+      <select asp-for="LevelId" class="form-select" aria-label="Disabled select example">
+                <option>Choose Levels</option>
+                @foreach (var item in ViewBag.courses)
+                {
+
+                    foreach (var item1 in item.Levels)
+                    {
+                        <option value="@item1.Id">level Name:@item1.Name Course Name:@item.Name</option>
+                    }
+                   
+                }
+
+            </select>
+            <span class="text text-danger" asp-validation-for="LevelId"></span>
+        </div>
+      
+
+        @Html.AntiForgeryToken()
+        <button style="border-radius:5px;color:black;background-color:red;width:80px;height:40px;" type="submit">Create</button>
+        <a asp-controller="altlevel" asp-action="Index"> <div style="width:20%;border-radius:15px;" class="btn btn-outline-success">All AltLevels </div></a>
+
+
+    </form>
+</div>

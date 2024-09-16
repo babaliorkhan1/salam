@@ -1,0 +1,37 @@
+﻿@model List<Level>
+
+<div class="container" style="width:60%;margin-top:80px;">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <th scope="row">@item.Id</th>
+                    <th>@item.Name</th>
+                    <th> <a asp-controller="level" asp-action="remove" asp-route-id="@item.Id"> <div style="width:100%; " class="btn btn-outline-success">Remove </div></a>
+    </th>
+                   
+
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+    <div>
+        <a asp-controller="level" asp-action="create"> <div style="width:100%; " class="btn btn-outline-success">Create </div></a>
+    </div>
+
+</div>

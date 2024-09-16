@@ -1,0 +1,46 @@
+﻿@model List<EventCategory>
+
+<div class="container" style="width:60%;margin-top:80px;">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">icon</th>
+                <th scope="col">update</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+@foreach (var item in Model)
+            {
+
+                <tr>
+
+                    <th scope="row">@item.Id</th>
+                    <th>@item.Name</th>
+
+                    <td><a asp-controller="ecategory" asp-action="update" asp-route-id="@item.Id">update<i class="fas fa-edit text text-primary"></i></a></td>
+                    <td><a asp-controller="ecategory" asp-action="Remove" asp-route-id="@item.Id">Remove<i class="fas fa-edit text text-primary"></i></a></td>
+
+                </tr>   
+            }
+
+
+        </tbody>
+    </table>
+<div  style="display:flex;justify-content:center;width:100%;">
+                    <a style="width:600px;background-color:black; color:wheat;margin-bottom:50px;" asp-controller="ecategory" asp-action="Create" class="btn red outline radius-xl ">Create</a>
+</div>
+    <div>
+    </div>
+
+</div>
+
+
+<style>
+
+
+</style>

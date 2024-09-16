@@ -1,0 +1,227 @@
+﻿@model Aboutt
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<div class="container" style="width:60%;">
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="StoryTitle"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="StoryTitle" />
+            <span class="text text-danger" asp-validation-for="StoryTitle"></span>
+
+        </div>
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="AltStoryTitle"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="AltStoryTitle" />
+            <span class="text text-danger" asp-validation-for="AltStoryTitle"></span>
+
+        </div>
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="StoryDescription"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="StoryDescription" />
+            <span class="text text-danger" asp-validation-for="StoryDescription"></span>
+
+        </div>
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Icon1"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Icon1" />
+            <span class="text text-danger" asp-validation-for="Icon1"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Icon2"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Icon2" />
+            <span class="text text-danger" asp-validation-for="Icon2"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Icon3"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Icon3" />
+            <span class="text text-danger" asp-validation-for="Icon3"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Icon4"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Icon4" />
+            <span class="text text-danger" asp-validation-for="Icon4"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Title1"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Title1" />
+            <span class="text text-danger" asp-validation-for="Title1"></span>
+
+        </div>
+
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Title2"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Title2" />
+            <span class="text text-danger" asp-validation-for="Title2"></span>
+
+        </div>
+
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Title3"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Title3" />
+            <span class="text text-danger" asp-validation-for="Title3"></span>
+
+        </div>
+
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Title4"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Title4" />
+            <span class="text text-danger" asp-validation-for="Title4"></span>
+
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Description1"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Description1" />
+            <span class="text text-danger" asp-validation-for="Description1"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Description2"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Description2" />
+            <span class="text text-danger" asp-validation-for="Description2"></span>
+
+        </div>
+
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Description3"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Description3" />
+            <span class="text text-danger" asp-validation-for="Description3"></span>
+
+        </div>
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Description4"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Description4" />
+            <span class="text text-danger" asp-validation-for="Description4"></span>
+
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="ProjectCount">Project Count(must be number or figure)</label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="ProjectCount" />
+            <span class="text text-danger" asp-validation-for="ProjectCount"></span>
+
+        </div>
+
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px; ">Project Count(must be number or figure)</label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="AnswerCount" />
+            <span class="text text-danger" asp-validation-for="AnswerCount"></span>
+
+        </div>
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="ClientCount">ClientCount (must be number or figure)</label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="ClientCount" />
+            <span class="text text-danger" asp-validation-for="ClientCount"></span>
+
+        </div>
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="LastCount"> LastCount (must be number or figure)</label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="LastCount" />
+            <span class="text text-danger" asp-validation-for="LastCount"></span>
+
+        </div>
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="CourseTitle"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="CourseTitle" />
+            <span class="text text-danger" asp-validation-for="CourseTitle"></span>
+
+        </div>
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="CourseDescription"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="CourseDescription" />
+            <span class="text text-danger" asp-validation-for="CourseDescription"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="WhatsappGroupTitle"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="WhatsappGroupTitle" />
+            <span class="text text-danger" asp-validation-for="WhatsappGroupTitle"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="WhatsappGroupDescription"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="WhatsappGroupDescription" />
+            <span class="text text-danger" asp-validation-for="WhatsappGroupDescription"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="WhatsappCourseCount"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="WhatsappCourseCount" />
+            <span class="text text-danger" asp-validation-for="WhatsappCourseCount"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="WhatsappGroupLink"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="WhatsappGroupLink" />
+            <span class="text text-danger" asp-validation-for="WhatsappGroupLink"></span>
+
+        </div>
+
+
+
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="formFile">Video File</label>
+            <input style="border:groove 5px maroon;border-radius:10px;" accept="video/*" type="file" class="form-control" asp-for="formFile" />
+            <span class="text text-danger" asp-validation-for="formFile"></span>
+
+        </div>
+        @Html.AntiForgeryToken()
+        <button style="border-radius:5px;color:black;background-color:red;width:80px;height:40px;" type="submit">Update</button>
+        <a asp-controller="event" asp-action="Index"> <div style="width:20%;border-radius:15px;" class="btn btn-outline-success">All Events </div></a>
+
+
+    </form>
+</div>

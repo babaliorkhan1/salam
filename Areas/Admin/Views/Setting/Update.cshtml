@@ -1,0 +1,123 @@
+﻿@model setting
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<div class="container" style="width:60%;">
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Title"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Title" />
+            <span class="text text-danger" asp-validation-for="Title"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Title2"></label>
+      <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Title2" />
+            <span class="text text-danger" asp-validation-for="Title2"></span>
+
+
+        </div>
+
+      
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="Description"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="Description" />
+            <span class="text text-danger" asp-validation-for="Description"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="CourseTitle"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="CourseTitle" />
+            <span class="text text-danger" asp-validation-for="CourseTitle"></span>
+
+        </div>
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="CourseDescription"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="CourseDescription" />
+            <span class="text text-danger" asp-validation-for="CourseDescription"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="EventTitle"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="EventTitle" />
+            <span class="text text-danger" asp-validation-for="EventTitle"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="EventDescription"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="EventDescription" />
+            <span class="text text-danger" asp-validation-for="EventDescription"></span>
+
+        </div>
+
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="CommentTitle"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="CommentTitle" />
+            <span class="text text-danger" asp-validation-for="CommentTitle"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="CommentDescription"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="CommentDescription" />
+            <span class="text text-danger" asp-validation-for="CommentDescription"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="FacebookLink"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="FacebookLink" />
+            <span class="text text-danger" asp-validation-for="FacebookLink"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="LinkendLink"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="LinkendLink" />
+            <span class="text text-danger" asp-validation-for="LinkendLink"></span>
+
+        </div>
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="GoogleLink"></label>
+            <input style="border:groove 5px maroon;border-radius:10px;" type="text" class="form-control" asp-for="GoogleLink" />
+            <span class="text text-danger" asp-validation-for="GoogleLink"></span>
+
+        </div>
+
+
+     
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="formFile">Image</label>
+            <input style="border:groove 5px maroon;border-radius:10px;"  accept="image/*" type="file" class="form-control" asp-for="formFile" />
+            <span class="text text-danger" asp-validation-for="formFile"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label style="color:black;font-size:18px;" asp-for="formFile2">Image</label>
+            <input style="border:groove 5px maroon;border-radius:10px;"  accept="image/*" type="file" class="form-control" asp-for="formFile2" />
+            <span class="text text-danger" asp-validation-for="formFile2"></span>
+
+        </div>
+
+       
+        @Html.AntiForgeryToken()
+        <button style="border-radius:5px;color:black;background-color:red;width:80px;height:40px;" type="submit">Update</button>
+        <a asp-controller="event" asp-action="Index"> <div style="width:20%;border-radius:15px;" class="btn btn-outline-success">All Setting </div></a>
+
+
+    </form>
+</div>
